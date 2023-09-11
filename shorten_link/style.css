@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #c2fe74;
+}
+.container{
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    /* width: 808px; */
+}
+.container form{
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.uil-link{
+    position: absolute;
+    width: 50px;
+    text-align: center;
+    font-size: 23px;
+    color: #b3b1b1;
+    pointer-events: none;
+}
+.container form input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: 1px solid #bdbebc;
+    padding: 0 120px 0 45px;
+    border-radius: 10px;
+    font-size: 20px;
+}::placeholder{
+    color: #b4b5b2;
+}
+.container form input:focus{
+    border: 2px solid #adc28f;
+}
+.container form input:valid ~ .uil-link{
+    color: #838483;
+}
+.short_btn{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    color: #ffffff;
+    background-color: #adc28f;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    pointer-events: none;
+}
+.container form input:valid ~ .short_btn{
+    opacity: 1;
+    pointer-events: auto;
+}
+.count{
+    margin: 20px 0;
+    display: flex;
+    padding-right: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+.count span{
+    font-size: 17px;
+}
+span span{
+    font-weight: 500;
+}
+.count a:hover{
+    color: #070707;
+}
+.url_area{
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin-bottom: 5px;
+    max-height: 400px;
+    overflow-y: scroll;
+}::-webkit-scrollbar{
+    width: 0;
+}
+.url_area :is(.title, .data){
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+.title li{
+    text-align: center;
+    background: #fceaea;
+    padding: 10px 0;
+}
+.data li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-all;
+    padding: 10px 5px;
+}
+.data li:last-child a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #070707;
+}
+.data li:last-child a:hover{
+    color: #ff6767;
+    font-size: 20px;
+}
+.data:nth-child(odd){
+    background: #f2f2f2;
+}
+.blur_effect{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(2px);
+    background: rgba(0, 0, 0, 0.1);
+    display: none;
+}
+.popup_box{
+    position: absolute;
+    background: #fff;
+    border-radius: 7px;
+    padding: 20px;
+    max-width: 480px;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+    /* display: none; */
+    transform: all 0.3s ease;
+}
+.show{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+.info_box{
+    color: #333;
+    background-color: #c6f4be;
+    padding: 9px;
+    border: 1px solid #adc28f;
+    border-radius: 7px;
+    font-size: 18px;
+    text-align: center;
+}
+.error{
+    color: #721c24;
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}
+.popup_box form{
+    margin-top: 10px;
+    position: relative;
+}
+.popup_box form label{
+    display: block;
+    font-size: 16px;
+}
+.popup_box form .copy{
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    top: 27%;
+    font-size: 25px;
+    cursor: pointer;
+}
+.info_box form .doma{
+    position: absolute;
+    right: 50%;
+}
+.popup_box form input{
+    margin-top: 5px;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #bdbebc;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+.save_btn{
+    position: relative;
+    right: 0;
+    top: 10px;
+    width: 100%;
+    padding: 10px;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    background-color: #adc28f;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

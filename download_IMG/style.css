@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #ff4aea;
+}
+form{
+    width: 450px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+header{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    color: #f933aa;
+}
+.url_input{
+    margin: 20px 0;
+}
+.title{
+    font-size: 20px;
+    color: #f933aa;
+}
+.field{
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+.field input{
+    height: 100%;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0 15px;
+    font-size: 15px;
+    background: transparent;
+}::placeholder{
+    opacity: 0.4;
+    color: #59024f;
+}
+.bottom_line{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4.5px;
+    width: 100%;
+    background: #f933aa;
+    border-radius: 30px;
+    transform: scale(0);
+    transition: all 0.3s ease;
+}
+input:focus ~ .bottom_line,
+input:valid ~ .bottom_line{
+    transform: scale(1);
+}
+.preview_area{
+    border-radius: 10px;
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border: 2px dashed #fb44b2;
+}
+.active{
+    border: none;
+}
+.pre_img{
+    width: 100%;
+    margin-top: 120px;
+    display: none;
+    border-radius: 10px;
+}
+.active .pre_img{
+    display: block;
+}
+.active .icon,
+.active span{
+    opacity: 0;
+}
+.preview_area .icon{
+    color: #f933aa;
+    font-size: 80px;
+}
+.preview_area span{
+    color: #f933aa;
+    margin-top: 20px;
+}
+button{
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 20px 0;
+    border-radius: 7px;
+    background: #f933aa;
+    pointer-events: none;
+    /* transition: background 0.3s ease; */
+}
+button:hover(){
+    background: #fce2f9;
+}
